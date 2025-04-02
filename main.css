@@ -4,9 +4,6 @@ body {
     font-family: arial;
     margin: 0px;
 }
-main {
-    
-}
 header {
     background-color: darkblue;
     color: aliceblue;
@@ -20,5 +17,22 @@ footer {
     margin: 50px;
 }
 a {
-    text-decoration: none; 
+    text-decoration: none;
+    transition: 1s 2s;
 }
+a:link {
+    color: black;
+}
+a:visited {
+    color: chocolate;
+}
+a:hover {
+    color: red;
+    text-decoration: underline;
+    transition: 0.3s;
+}
+a:active {
+    color: black;
+    opacity: 0.3;
+}
+
