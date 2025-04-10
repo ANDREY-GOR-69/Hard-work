@@ -2,27 +2,86 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Горшков Андрей Максимович. Лабораторная 4</title>
+        <title>Горшков Андрей Максимович. Комикс</title>
         <link rel="stylesheet" href="../main.css">
         <link rel="icon" href="../dog.jpg">
         <style>
-            .first {
-                border: 1px solid black;
-                border-radius: 50%;
+            .open {
+                position: relative;
+            }
+
+            .shield {
+                width: 100%;
+                display: block;
+            }
+
+            .first, .second, .third, .fourth {
+                opacity: 0;
+                transition: opacity 1s ease;
+                pointer-events: none;
+                position: absolute;
                 background-color: white;
-                /* position: absolute; */
+                border: 1px solid white;
+                border-radius: 50%;
+                z-index: 2; 
+            }
+
+            .first {
+                height: 30px;
+                width: 65px;
+                left: 900px;
+                top: 530px;
+                transition-delay: 1s;
+            }
+
+            .second {
+                height: 34px;
+                width: 65px;
+                left: 950px;
+                top: 510px;
+                transition-delay: 2s;
+            }
+
+            .third {
+                height: 34px;
+                width: 65px;
+                left: 1000px;
+                top: 490px;
+                transition-delay: 3s;
+            }
+
+            .fourth {
+                height: 70px;
+                width: 110px;
+                left: 1050px;
+                top: 445px;
+                text-align: center;
+                vertical-align: middle;
+                box-sizing: border-box;
+                padding-top: 20px;
+                transition-delay: 4s;
+            }
+
+            .open:hover .first,
+            .open:hover .second,
+            .open:hover .third,
+            .open:hover .fourth {
+                opacity: 1;
+                pointer-events: auto;
             }
         </style>
     </head>
     <body>
         <header>НГТУ, ФБ, Лабораторная работа 4</header>
-        
+
         <main>
-            <!-- <img src="solo.jpg" width="auto"> -->
-            <div class="first"></div>
-            <div class="second"></div>
-            <div class="third"></div>
-            <div class="fourth"></div>
+            <div class="open">
+                <img class="shield" src="shield.jpg">
+                <div class="first"></div>
+                <div class="second"></div>
+                <div class="third"></div>
+                <div class="fourth">Да не бомбит у меня</div>
+            </div>
         </main>
 
         <footer>
