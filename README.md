@@ -22,4 +22,3 @@
 
 *Дата: 19.04.2025*
 
-fgohgkhdsjlhfdowieurfoilwifdjowihgw
