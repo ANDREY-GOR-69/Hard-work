@@ -12,8 +12,8 @@
                 document.getElementById('Image').style.filter = 'blur(' + value + ')';
             }
             function brightnessChange() {
-                let value = document.getElementById('brightnessValue').value;
-                document.getElementById('brightnessOutput').innerText = value + '%';
+                let value = document.getElementById('brightnessValue').value + '%';
+                document.getElementById('brightnessOutput').innerText = value;
                 document.getElementById('Image').style.filter = 'brightness(' + value + ')';
             }
             function contrastChange() {
@@ -26,6 +26,11 @@
                 document.getElementById('grayscaleOutput').innerText = value;
                 document.getElementById('Image').style.filter = 'grayscale(' + value + ')';
             }
+            function hueRotateChange() {
+                let value = document.getElementById('hueRotateValue').value + 'deg';
+                document.getElementById('hueRotateOutput').innerText = value;
+                document.getElementById('Image').style.filter = 'hue-rotate(' + value + ')';
+            }
         </script>
     </head>
     <body>
@@ -35,7 +40,7 @@
             <div>
                 Фильтр blur:
                 <input type="range" min="0" max="20" value="0" onchange="blurChange()" id="blurValue">
-                <span id="blurOutput"></span>
+                <span id="blurOutput">0px</span>
             </div>
             <div>
                 Фильтр brightness:
@@ -51,6 +56,11 @@
                 Фильтр grayscale:
                 <input type="range" min="0" max="100" value="0" onchange="grayscaleChange()" id="grayscaleValue">
                 <span id="grayscaleOutput"></span>
+            </div>
+            <div>
+                Фильтр hue-rotate:
+                <input type="range" min="0" max="360" value="0" onchange="hueRotateChange()" id="hueRotateValue">
+                <span id="hueRotateOutput">0°</span>
             </div>
             <div><img src="shield.webp" id="Image"></div>
         </main>
