@@ -36,6 +36,11 @@
                 document.getElementById('invertOutput').innerText = value;
                 document.getElementById('Image').style.filter = 'invert(' + value + ')';
             }
+            function saturateChange() {
+                let value = document.getElementById('saturateValue').value + '%';
+                document.getElementById('saturateOutput').innerText = value;
+                document.getElementById('Image').style.filter = 'saturate(' + value + ')';
+            }
         </script>
     </head>
     <body>
@@ -71,6 +76,11 @@
                 Фильтр invert:
                 <input type="range" min="0" max="100" value="0" onchange="invertChange()" id="invertValue">
                 <span id="invertOutput">0%</span>
+            </div>
+            <div>
+                Фильтр saturate:
+                <input type="range" min="0" max="500" value="100" onchange="saturateChange()" id="saturateValue">
+                <span id="saturateOutput">100%</span>
             </div>
             <div><img src="shield.webp" id="Image"></div>
         </main>
