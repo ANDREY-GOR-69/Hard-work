@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Горшков Андрей Максимович. Фильтры</title>
+        <link rel="stylesheet" href="../main.css">
+        <link rel="icon" href="../dog.jpg">
+        <script>
+            function blurChange() {
+                let value = document.getElementById('blurValue').value + 'px';
+                document.getElementById('blurOutput').innerText = value;
+                document.getElementById('Image').style.filter = 'blur(' + value + ')';
+            }
+            function brightnessChange() {
+                let value = document.getElementById('brightnessValue').value;
+                document.getElementById('brightnessOutput').innerText = value + '%';
+                document.getElementById('Image').style.filter = 'brightness(' + value + ')';
+        }
+        </script>
+    </head>
+    <body>
+        <header>НГТУ, ФБ, Лабораторная работа 5</header>
+        
+        <main>
+            <div>
+                Фильтр blur:
+                <input type="range" min="0" max="20" value="0" onchange="blurChange()" id="blurValue">
+                <span id="blurOutput"></span>
+            </div>
+            <div>
+                Фильтр brightness:
+                <input type="range" min="0" max="500" value="100" onchange="brightnessChange()" id="brightnessValue">
+                <span id="brightnessOutput">100%</span>
+            </div>
+            <div><img src="shield.webp" id="Image"></div>
+        </main>
+
+        <footer>
+            &copy; Андрей Горшков, ФБИ-33, 2 курс, 2025
+        </footer>
+    </body>
+</html>
