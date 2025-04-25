@@ -26,7 +26,6 @@
             function razn() {
                 let inputA=document.getElementById('numberA');
                 let inputB=document.getElementById('numberB');
-
                 let a = parseInt(inputA.value);
                 let b = parseInt(inputB.value);
                 let result = a - b;
@@ -44,7 +43,6 @@
             function showDiv() {
                 let inputA=document.getElementById('numberA');
                 let inputB=document.getElementById('numberB');
-
                 let a = parseInt(inputA.value);
                 let b = parseInt(inputB.value);
                 if (b==0) {
@@ -61,8 +59,6 @@
                     inputA.style.backgroundColor = 'red';
                     return;
                 }
-                inputA.style.color = '';
-                inputA.style.backgroundColor = '';
                 if (isNaN(b)) {
                     alert('Введите числовое значение во второе поле');
                     inputB.style.color = 'black';
@@ -90,27 +86,22 @@
                     inputB.style.backgroundColor = 'red';
                     return;    
                 }
-                inputA.style.color = '';
-                inputA.style.backgroundColor = '';
-                inputB.style.color = '';
-                inputB.style.backgroundColor = '';
                 if (isNaN(a)) {
                     alert('В поле есть нечисловое значение');
                     inputA.style.color = 'black';
                     inputA.style.backgroundColor = 'red';
                     return;    
                 }
-                inputA.style.color = '';
-                inputA.style.backgroundColor = '';
                 if (isNaN(b)) {
                     alert('В поле есть нечисловое значение');
                     inputB.style.color = 'black';
                     inputB.style.backgroundColor = 'red';
                     return;    
                 }
+                inputA.style.color = '';
+                inputA.style.backgroundColor = '';
                 inputB.style.color = '';
-                inputB.style.backgroundColor = ''; 
-                
+                inputB.style.backgroundColor = '';   
                 let result = a**b;
                 alert (a+' в степени '+ b +' равно ' + result);
             }
