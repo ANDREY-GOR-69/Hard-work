@@ -48,6 +48,14 @@
 
                 document.getElementById('current-date').innerHTML = output;
             }
+            function changeColors() {
+                const header = document.getElementsByTagName('header')[0];
+                const rgb = `rgb(${Math.random()*255}, ${Math.random()*255}, ${Math.random()*255})`;
+                header.style.color = rgb
+            }
+            function startChangeColors() {
+                setInterval(changeColors, 1000)
+            }
         </script>
     </head>
     <body onload="showDate()">
@@ -55,6 +63,10 @@
         
         <main>
             <div id="current-date"></div>
+            <div>
+                <button onclick="startChangeColors()">Старт</button>
+                <button onclick="stopChangeColors()" disabled>Стоп</button>
+            </div>
         </main>
 
         <footer>
